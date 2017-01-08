@@ -18,8 +18,17 @@ app.post('/todos',(req,res)=>{
     res.send(doc);
   },(err)=>{
     res.status(400).send(err);
-  })
-})
+  });
+});
+
+app.get('/todos',(req,res)=>{
+
+  Todo.find().then((todos)=>{
+    res.send({todos:todos});
+  },(err)=>{
+    res.status(400).send(err);
+  });
+});
 
 app.listen(3000,()=>{
   console.log("Listening on 3000")
