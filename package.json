@@ -8,8 +8,8 @@
     "test": "mocha server/**/*.test.js",
     "text-watch": "nodemon --exec 'npm test'"
   },
-  "engines":{
-    "node":"6.2.2"
+  "engines": {
+    "node": "6.2.2"
   },
   "keywords": [],
   "author": "",
