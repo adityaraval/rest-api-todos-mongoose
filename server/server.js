@@ -1,3 +1,13 @@
+var env = process.env.NODE_ENV || 'development';
+
+if(env==='development'){
+  process.env.PORT=3000;
+  process.env.MONGODB_URI='mongodb://localhost:27017/todoAPI';
+}else if(env==='test'){
+  process.env.PORT=3000;
+  process.env.MONGODB_URI='mongodb://localhost:27017/todoAPITest';
+}
+
 const {ObjectID} =  require('mongodb');
 const bodyParser = require('body-parser');
 const express = require('express');
